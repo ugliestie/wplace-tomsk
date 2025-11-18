@@ -1,6 +1,6 @@
 # Дампы Томска в wplace.live
 
-Ежедневные таймлапсы из этих дампов можно найти в [репозитории](https://github.com/niklinque/wplace-tomsk-timelapse/releases) и в [телеграм-канале](https://t.me/wpttimelapse)).
+Ежедневные таймлапсы из этих дампов можно найти в [репозитории](https://github.com/niklinque/wplace-tomsk-timelapse/releases) и в [телеграм-канале](https://t.me/wpttimelapse).
 
 Этот репозиторий содержит скрипт для автоматической загрузки и обработки изображений с wplace.live.
 

@@ -170,12 +170,14 @@ def download_and_crop_area(tl_x, tl_y, tl_px_x, tl_px_y, br_x, br_y, br_px_x, br
     logger.info(f"Изображение успешно обрезано. Новый размер: {cropped_image.size}")
 
     # --- 4. Масштабирование результата ---
-    final_size = (cropped_image.width * SCALE_FACTOR, cropped_image.height * SCALE_FACTOR)
-    logger.info(f"Масштабирую изображение до {final_size} (коэффициент {SCALE_FACTOR}x)")
-    scaled_image = cropped_image.resize(final_size, Image.Resampling.NEAREST)
-
-    # --- 5. Сохранение итогового изображения ---
-    save_image(scaled_image)
+    if SCALE_FACTOR != 1:
+        final_size = (cropped_image.width * SCALE_FACTOR, cropped_image.height * SCALE_FACTOR)
+        logger.info(f"Масштабирую изображение до {final_size} (коэффициент {SCALE_FACTOR}x)")
+        scaled_image = cropped_image.resize(final_size, Image.Resampling.NEAREST)
+        save_image(scaled_image)
+    else:
+        save_image(cropped_image)
+        
     return True
 
 # --- ТОЧКА ВХОДА ---

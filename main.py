@@ -18,7 +18,7 @@ from config import *
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-BASE_URL = "https://backend.wplace.live/tile/{x}/{y}.png"
+BASE_URL = "https://backend.wplace.live/files/s0/tiles/{x}/{y}.png"
 
 # --- ОСНОВНЫЕ ФУНКЦИИ ---
 
